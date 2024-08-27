@@ -1,115 +1,124 @@
-const mainContainer = document.querySelector(".edn-anime");
-document.addEventListener("scroll", function () {
-  const movingImage = document.getElementById("moving-mbl");
-  const rect = mainContainer.getBoundingClientRect();
+// Hamburger menu
+const humberger = document.querySelector(".hamburger");
+const navUl = document.querySelector(".nav-ul");
 
-  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-    movingImage.classList.add("animate-image");
-  } else {
-    movingImage.classList.remove("animate-image");
-  }
+humberger.addEventListener("click", function () {
+  humberger.classList.toggle("active");
+  navUl.classList.toggle("active");
 });
 
-const empContainer = document.querySelector(".edn-anime");
-document.addEventListener("scroll", function () {
-  const movingEmpImage = document.getElementById("moving-mbl-emp");
-
-  const rect = mainContainer.getBoundingClientRect();
-  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-    movingEmpImage.classList.add("animate-image");
-  } else {
-    movingEmpImage.classList.remove("animate-image");
-  }
-});
-
-// Spext
-
-document.addEventListener("scroll", function () {
-  const movingSpextImage = document.getElementById("moving-mbl-spext");
-  const rect = empContainer.getBoundingClientRect();
-  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-    movingSpextImage.classList.add("animate-image");
-  } else {
-    movingSpextImage.classList.remove("animate-image");
-  }
-});
-document.addEventListener("scroll", function () {
-  const movingEDNImage = document.getElementById("moving-mbl-EDN");
-  const rect = empContainer.getBoundingClientRect();
-  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-    movingEDNImage.classList.add("animate-image");
-  } else {
-    movingEDNImage.classList.remove("animate-image");
-  }
-});
-
-document.addEventListener("scroll", function () {
-  const movingQueryImage = document.getElementById("moving-mbl-QueryQ");
-  const rect = empContainer.getBoundingClientRect();
-  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-    movingQueryImage.classList.add("animate-image");
-  } else {
-    movingQueryImage.classList.remove("animate-image");
-  }
-});
-
-let currentDiv = 1;
-const totalDivs = 5;
-
-function showDivs(divNum) {
-  const divs = document.querySelectorAll(".inner-div");
-  const middleDiv = document.querySelector(".mid-animate-hero");
-  divs.forEach((div, index) => {
-    div.classList.remove("show", "hide");
-    div.style.display = "none";
-    if (index + 1 === divNum) {
-      div.classList.add("show");
-      div.style.display = "block";
-    }
+document.querySelectorAll(".nav-ul-items").forEach((n) => {
+  n.addEventListener("click", function () {
+    humberger.classList.remove("active");
+    navUl.classList.remove("active");
   });
+});
+
+
+// Animations
+const radios = document.querySelectorAll('input[name="slider"]');
+let currentIndex = 0;
+
+function goToNextSlide() {
+  radios[currentIndex].checked = false;
+  currentIndex = (currentIndex + 1) % radios.length;
+  radios[currentIndex].checked = true;
 }
+setInterval(goToNextSlide, 3000);
 
-function hideDivs(divNum) {
-  const currentDiv = document.getElementById(`div-${divNum}`);
-  currentDiv.classList.add("hide");
-}
 
-showDivs(currentDiv);
+// popup
+const Popup = document.querySelector('.popup_container')
+const btnDemo = document.querySelector(".btn-popup-click")
+const btnGoals = document.querySelector(".btn-goals")
+const popupIcons = document.querySelector(".popup-icon")
 
-setInterval(() => {
-  hideDivs(currentDiv);
+btnDemo.addEventListener("click" , function(){
+  if(Popup.classList.contains("popup-close")){
 
-  currentDiv++;
+    Popup.classList.remove("popup-close")
+  }else{
+    Popup.classList.add("popup-close")
+  }
+})
 
-  if (currentDiv > totalDivs) {
-    currentDiv = 1;
+btnGoals.addEventListener("click" , function(){
+  if(Popup.classList.contains("popup-close")){
+
+    Popup.classList.remove("popup-close")
+    console.log("keu")
+  }else{
+    Popup.classList.add("popup-close")
+  }
+})
+
+
+popupIcons.addEventListener("click" , function(){
+  if(Popup.classList.contains("popup-close")){
+
+    Popup.classList.remove("popup-close")
+  }else{
+    Popup.classList.add("popup-close")
+  }
+})
+
+
+
+
+const formData = {}
+
+document.getElementById("myform").addEventListener("change" , function(e){
+  const { name, value } = e.target;
+  formData[name] = value; 
+})
+
+document.getElementById("myform").addEventListener("submit", async function(e){
+  e.preventDefault()
+  try {
+    const response = await fetch("https://veevotech.com/process_contact",{
+      method:'POST', 
+      headers:{
+       'Content-Type': 'application/json',
+      },
+      body:JSON.stringify(formData)
+    })
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
   }
 
-  setTimeout(() => {
-    showDivs(currentDiv);
-  }, 1000);
-}, 3000);
+  const result = await response.json();
+  console.log('Success:', result)
+  
 
-// let currentDiv = 1;
-// const totalDivs = 5;
 
-// function showDivs(divNums) {
-//   const divs = document.querySelectorAll(".inner-div");
+  document.querySelector(".popup-btn").addEventListener('click' , function(){
+    if(Popup.classList.contains("popup-close")){
+      Popup.classList.remove("popup-close")
+    }else{
+      Popup.classList.add("popup-close")
+    }
+  })
+  } catch (error) {
+    console.log("ERROR:", error )
+  }
+})
 
-//   divs.forEach((div) => {
-//     div.style.display = "none";
-//   });
+// Sticky Navigation
+const sectionHero = document.querySelector(".hero-section")
+const header = document.querySelector(".header")
+const obs  = new IntersectionObserver(function(entries){
+  const ent = entries[0]
+  if(ent.isIntersecting===false){
+    header.classList.add("sticky")
+  } else{
+  header.classList.remove("sticky")
+  }
+},
+{
+  root:null,
+  threshold:0,
+  rootMargin:"-300px"
+})
 
-//   document.getElementById(`div-${divNums}`).style.display = "block";
-// }
-
-// showDivs(currentDiv);
-
-// setInterval(() => {
-//   currentDiv++;
-
-//   if (currentDiv > totalDivs) {
-//     currentDiv = 1;
-//   }
-//   showDivs(currentDiv);
-// }, 3000);
+obs.observe(sectionHero)

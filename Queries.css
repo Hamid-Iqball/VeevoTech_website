@@ -1,0 +1,659 @@
+@media (min-width: 1405pc) {
+  .container {
+    margin-left: 20rem;
+  }
+}
+
+@media (max-width: 1256px) {
+  .container {
+    margin-right: 10rem;
+  }
+  .cards {
+    perspective: 500px;
+    border-radius: 2rem;
+  }
+  .edn-anime {
+    height: 40rem;
+    width: 70rem;
+  }
+}
+@media (max-width: 1125px) {
+  .container {
+    margin-right: 10rem;
+  }
+  .cards {
+    perspective: 500px;
+    border-radius: 2rem;
+  }
+  .edn-anime {
+    height: 40rem;
+    width: 70rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    margin-right: 15rem;
+  }
+  .header{
+
+    padding-top: 2rem;
+  }
+
+  .cards {
+    perspective: 500px;
+    border-radius: 2rem;
+  }
+  .edn-anime {
+    height: 36rem;
+    width: 66rem;
+  }
+  .anime-acc-log {
+    height: 4rem;
+    width: 5rem;
+  }
+  .acc-anime-heading {
+    height: 3rem;
+    width: 24rem;
+  }
+  .acc-anime-text {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-size: 100;
+  }
+  .launh-arrow-acc {
+    height: 5rem;
+    width: 4rem;
+  }
+  .acc-link-anime {
+    font-size: 1.6rem;
+  }
+
+  .mobile-acc-anime {
+    width: 16rem;
+    top: 3.4rem;
+  }
+  .emp-logo-1 {
+    left: 50%;
+  }
+  .emp-logo-2 {
+    right: 30rem;
+  }
+  .emp-logo-3 {
+    top: 2rem;
+    right: 16rem;
+  }
+  .emp-logo-4 {
+    right: 1.8rem;
+  }
+  .emp-logo-5 {
+    right: 1rem;
+  }
+  nav ul {
+    text-decoration: none;
+    gap: 5rem;
+  }
+
+  .contacts {
+    width: 62rem;
+  }
+  .header {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0 1rem; */
+    padding: 0 2rem;
+  }
+
+  .logo {
+    width: 7rem;
+  }
+  .nav-icons {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .goals-Veevotech {
+    margin: 8rem auto 2rem auto;
+    gap: 3rem;
+  }
+
+  .heart {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .veevoTech-logo {
+    height: 28rem;
+    width: 44rem;
+  }
+
+  .goals-heading {
+    font-family: "space Grotesk";
+    font-size: 5.4rem;
+    font-weight: 500;
+    color: #557af8;
+    text-align: start;
+  }
+
+  .goals-text {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .header-socialMedia {
+    display: none;
+  }
+
+  .contacts {
+    display: none;
+  }
+  .hero-text {
+    font-size: 4rem;
+  }
+  .nav-ul {
+    background-color: #fff;
+    position: fixed;
+    left: -100%;
+    top: 7.6rem;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.4s;
+    border: none;
+    gap: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .nav-ul-items {
+    margin: 2px 0;
+  }
+  .nav-ul.active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .products-heading h1 {
+    font-size: 5rem;
+  }
+  .products-heading p {
+    font-size: 2rem;
+  }
+
+  .achievemnts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+  }
+  .achievemnt-2,
+  .achievemnt-4,
+  .achievemnt-6 {
+    border-right: none;
+  }
+  .achievemnt-4 {
+    border-bottom: 2px solid #d6d6d6;
+  }
+  .achievemnt-3 {
+    border-right: 2px solid #d6d6d6;
+  }
+  .achievemnt span {
+    font-size: 5rem;
+    color: #ff771f;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 887px) {
+  .container {
+    margin-right: 10rem;
+  }
+  .cards {
+    perspective: 500px;
+    border-radius: 2rem;
+  }
+  .edn-anime {
+    height: 34rem;
+    width: 56rem;
+  }
+  .acc-link-anime {
+    font-size: 1.2rem;
+    gap: 0.5rem;
+  }
+  .emp-anime-heading {
+    height: 3rem;
+    width: 14rem;
+  }
+  .mobile-emp-anime {
+    width: 19rem;
+  }
+  .emp-logo-2 {
+    right: 24rem;
+  }
+  .spext-anime-heading {
+    height: 3.5rem;
+    width: 16rem;
+  }
+  .spext-logo-2 {
+    width: 2rem;
+    height: 4rem;
+    left: 20rem;
+  }
+  .spext-logo-3 {
+    height: 8rem;
+    width: 6rem;
+  }
+  .spext-logo-4 {
+    height: 2rem;
+    width: 2rem;
+    left: 28rem;
+    bottom: 8rem;
+  }
+  .spext-logo-5 {
+    width: 2rem;
+    right: 4rem;
+  }
+  .spext-logo-6 {
+    height: 8rem;
+    width: 8rem;
+    left: 26rem;
+  }
+
+  .anime-EDN-logo {
+    height: 5rem;
+    width: 5rem;
+  }
+  .edn-anime-heading {
+    height: 3rem;
+    width: 14rem;
+  }
+  #queryq-logo {
+    height: 4rem;
+    width: 4rem;
+  }
+  .queryQ-grp {
+    gap: 2rem;
+    bottom: 1rem;
+    left: 6rem;
+  }
+  .QueryQ-groups {
+    height: 2rem;
+    width: 2rem;
+  }
+  .side-q-icons {
+    gap: 1rem;
+    margin: 1rem 1rem 0 0;
+  }
+  .side-q-icon {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+.products-heading{
+  position: static;
+}
+  .products-heading h1 {
+    font-size: 5rem;
+    letter-spacing: 1.3;
+    text-align: center;
+  }
+  .products-heading p {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .veevoTech-logo {
+    height: 24rem;
+    width: 36rem;
+  }
+
+  .goals-heading {
+    font-size: 5rem;
+  }
+  .goals-text {
+    font-size: 1.8rem;
+  }
+  .locations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-header {
+    margin: 0 2rem;
+  }
+  .services-heading {
+    font-size: 6rem;
+  }
+  .services-head-text {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  .container {
+    margin-right: 4rem;
+  }
+  .cards {
+    perspective: 300px;
+    border-radius: 2rem;
+  }
+  .edn-anime {
+    height: 30em;
+    width: 50rem;
+  }
+  .acc-anime-heading {
+    height: 2rem;
+    width: 10rem;
+  }
+  .emp-anime-heading {
+    height: 2rem;
+    width: 10rem;
+  }
+  .acc-anime-text {
+    font-size: 1rem;
+    line-height: normal;
+    font-weight: 200;
+  }
+  .mobile-emp-anime {
+    width: 18rem;
+    margin-right: 2rem;
+  }
+  .emp-logo-4 {
+    right: 1rem;
+  }
+  .spext-anime-heading {
+    height: 2rem;
+    width: 10rem;
+  }
+  .spext-logo-2 {
+    width: 1.6rem;
+  }
+  .spext-logo-3 {
+    height: 6rem;
+  }
+  .spext-logo-1 {
+    height: 10rem;
+    width: 4rem;
+  }
+  .spext-logo-6 {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+@media (max-width: 780px) {
+  .goals-Veevotech {
+    padding: 2rem;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .veevoTech-logo {
+    height: 20rem;
+    width: 32rem;
+  }
+  .achievemts-section {
+    margin: 0 2rem;
+  }
+}
+@media (max-width: 700px) {
+  .hero-text {
+    font-size: 3.3rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .btn-demo {
+    font-size: 1.8rem;
+    padding: 1.2rem 4rem;
+  }
+  .products {
+    margin: 2rem 2rem;
+  }
+  .goals-heading {
+    font-size: 4rem;
+  }
+  .services-head-text {
+    font-size: 1.5rem;
+  }
+  .services-heading{
+    text-align: center;
+  
+  }
+  .btn-goals {
+    padding: 1.4rem 4rem;
+    font-size: 1.8rem;
+  }
+  .informed-heading {
+    font-size: 4rem;
+  }
+  .informed-text {
+    font-size: 1.6rem;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footer h2 {
+    font-size: 3rem;
+    text-align: justify;
+  }
+  .footer-links {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 614px) {
+  .container {
+    /* margin-right: 6rem; */
+    margin-left: 4rem;
+  }
+  .cards {
+    position: relative;
+    height: 400px;
+    width: 430px;
+    margin-bottom: 20px;
+    perspective: 200px;
+    transform-style: preserve-3d;
+  }
+  .cards label {
+    position: absolute;
+    width: 430px;
+    height: 400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+  .cards .card {
+    position: relative;
+    height: 100%;
+    background-color: #323444;
+    border-radius: 10px;
+  }
+  .edn-anime {
+    width: 90%;
+    gap: 0;
+    height: 100%;
+  }
+  .acc-anime-heading {
+    height: 4rem;
+    width: 15rem;
+  }
+  .acc-link-anime {
+    gap: 0;
+    flex-direction: column;
+  }
+  .mobile-acc-anime {
+    height: 80%;
+    bottom: 0;
+    width: 16rem;
+    top: 8rem;
+  }
+
+  .workflow-acc-anime {
+    right: -1rem;
+    height: 4rem;
+    width: 4rem;
+  }
+  .emp-anime-heading {
+    height: 4rem;
+    width: 17rem;
+  }
+  .emp-logo-2 {
+    right: 16rem;
+  }
+  .emp-logo-3 {
+    right: 8rem;
+  }
+  .emp-logo-4 {
+    right: -2rem;
+  }
+  .emp-logo-5 {
+    right: -3rem;
+  }
+  .spext-anime-heading {
+    height: 3rem;
+    width: 10rem;
+  }
+  .spext-logo-2 {
+    left: 20rem;
+  }
+  .spext-logo-4 {
+    left: 20rem;
+  }
+  .spext-logo-5 {
+    left: 14rem;
+  }
+  .spext-logo-6 {
+    left: 18rem;
+  }
+  .anime-EDN-logo {
+    height: 4rem;
+    width: 4rem;
+  }
+  .edn-anime-heading {
+    height: 3rem;
+  }
+  .mobile-edn-anime {
+    width: 26rem;
+    /* padding-left: 4rem; */
+  }
+  #moving-mbl-QueryQ {
+    height: 80%;
+    width: 15rem;
+  }
+  .queryQ-grp {
+    gap: 1rem;
+    left: 4rem;
+  }
+  .side-q-icons {
+    margin: 1rem 0;
+    margin-right: -6rem;
+  }
+  .side-q-icon {
+    margin-right: -8rem;
+  }
+}
+@media (max-width: 590px) {
+  .hero-text {
+    font-size: 2.6rem;
+  }
+  .popup_container{
+    left: 7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-text {
+    font-size: 2.2rem;
+  }
+  .locations {
+    grid-template-columns: 1fr;
+  }
+  .achievemnts-heading {
+    margin: 5rem 2rem;
+  }
+  .achievemnts {
+    grid-template-columns: 1fr;
+  }
+  .achievemnt-2,
+  .achievemnt-4,
+  .achievemnt-6 {
+    border-right: none;
+    border-left: 2px solid #d6d6d6;
+  }
+  .achievemnt-4,
+  .achievemnt-5 {
+    border-bottom: 2px solid #d6d6d6;
+  }
+  .achievemnt-3 {
+    border-right: 2px solid #d6d6d6;
+  }
+  .footer-links {
+    gap: 3rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .informed-form {
+    width: 30rem;
+    padding: 1.2rem;
+  }
+  .form-arrow {
+    left: 24rem;
+    bottom: 0.4rem;
+  }
+  .popup{
+    width: 30rem;
+    height: 27rem;
+    z-index: 9999;
+  }
+  .popup-inputs{
+    width: 28rem;
+  }
+  .popup-input{
+    width: 28rem;
+  }
+}
+
+@media (max-width: 428px) {
+  .hero-text {
+    font-size: 2rem;
+  }
+  .clients h3 {
+    text-align: center;
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 396px) {
+  .hero-text {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 364px) {
+  .hero-text {
+    font-size: 1.6rem;
+  }
+ 
+}
