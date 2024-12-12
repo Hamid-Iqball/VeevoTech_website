@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Vt_Web_Page.css" />
-    <link rel="stylesheet" href="Queries.css" />
+    <link rel="stylesheet" href="mediaQueries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,23 +22,20 @@
     <title>Veevo Tech</title>
   </head>
   <body>
-    <div class="popup_container popup-close"  >
-      <div class="popup">
-        
-        <div class="popup-header"><p>Get Started</p>
-          <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="popup-icon">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-  </svg>
-  </span></div>
-  <form id="myform" class="popup-inputs" >
 
-  <input type="text" placeholder="Your Name" class="popup-input" id="name" name="name" required>  
-  <input type="text" placeholder="Email Address" class="popup-input" id="email" name="email" required> 
-  <input type="text" placeholder="Mobile Number" class="popup-input" id="phone" required> 
-  <input type="text" placeholder="Org/Company name" class="popup-input" id="vt_form_org_name" required> 
-  <button class="popup-btn" type="submit">Proceed</button>
-  </form>
-  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModalBtn">&times;</span>
+      <h2>Get started</h2>
+     
+      <form id="modal-form">
+        <input type="text" placeholder="Your Name" id="name" required>
+        <input type="email" placeholder="Your Email" id="email" required>
+        <input type="number" placeholder="Mobile number" id="phone" required >
+        <input type="text" placeholder="Org/Company name" id="vt_form_org_name">
+      </form>
+      <button type="submit">Submit</button>
+    </div>
   </div>
     <!-- ---------Hereo Section---------- -->
     <section class="hero-section" id="home">
@@ -138,6 +135,10 @@
         <!-- Social Media -->
         <div class="header-socialMedia">
           Follow us
+        <a href="https://www.facebook.com/@VeevoT">
+          <img src="1. Navbar/facebook.png" alt="facebook" class="sc-icons">
+        </a>
+
           <a href="https://www.linkedin.com/company/veevo-tech/">
             <img
               src="./1. Navbar/linkedin.png"
@@ -146,7 +147,10 @@
             />
           </a>
           <a href="https://twitter.com/VeevoTech">
-            <img src="./1. Navbar/X.png" alt="Vt X" class="sc-icons" />
+            <img src="./1. Navbar/twitter.png" alt="Vt X" style='height: 18px;' class="sc-icons" />
+          </a>
+          <a href="">
+            <img src="1. Navbar/youtube.png" alt="" class="sc-icons">
           </a>
         </div>
       </header>
@@ -167,7 +171,11 @@
         </span>
         <p>100+ Business Trust</p>
 
-        <h1 class="hero-text">Delivering Comprehensive Solution</h1>
+        <h1 class="hero-text">Delivering <span class="hero-text-span">
+
+          Comprehensive Solutions
+        </span> 
+      </h1>
         <h1 class="hero-text">for Guaranteed Business Growth</h1>
         <div class="hero-description">
           <p>Experience Effortless Business Automation with Veevo Tech</p>
@@ -942,7 +950,7 @@
             <div class="product-header">
               <span
                 ><img
-                  src="./4. Products/Frame 90-2.png"
+                  src="./4. Products/Frame 90-3.png"
                   alt="Empleado"
                   class="product-logo"
               /></span>
@@ -1227,7 +1235,7 @@
         <a href="https://veevotech.com/technology_solution" class="service">
           <span class="service-logo">
             <img
-              src="./5. Services/Software.png"
+              src="./5. Services/Soft.png"
               alt="Software Development Logo"
               class="service-IMG-logo"
             />
@@ -1528,5 +1536,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="Vt_Web_Page.js"></script>
+
+
   </body>
 </html>

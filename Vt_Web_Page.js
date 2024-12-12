@@ -1,3 +1,21 @@
+// Sticky Navigation
+const sectionHero = document.querySelector(".hero-section")
+const header = document.querySelector(".header")
+const obs  = new IntersectionObserver(function(entries){
+  const ent = entries[0]
+  if(ent.isIntersecting===false){
+    header.classList.add("sticky")
+  } else{
+  header.classList.remove("sticky")
+  }
+},
+{
+  root:null,
+  threshold:0,
+  rootMargin:"-300px"
+})
+
+obs.observe(sectionHero)
 // Hamburger menu
 const humberger = document.querySelector(".hamburger");
 const navUl = document.querySelector(".nav-ul");
@@ -27,42 +45,45 @@ function goToNextSlide() {
 setInterval(goToNextSlide, 3000);
 
 
-// popup
-const Popup = document.querySelector('.popup_container')
+
+
 const btnDemo = document.querySelector(".btn-popup-click")
 const btnGoals = document.querySelector(".btn-goals")
 const popupIcons = document.querySelector(".popup-icon")
 
-btnDemo.addEventListener("click" , function(){
-  if(Popup.classList.contains("popup-close")){
 
-    Popup.classList.remove("popup-close")
-  }else{
-    Popup.classList.add("popup-close")
+
+// script.js
+
+// Get references to modal, buttons, and close button
+const modal = document.getElementById("myModal");
+const openModalBtnHero = document.getElementById("openModalBtnHero");
+const openModalBtnMain = document.getElementById("openModalBtnMain");
+const closeModalBtn = document.getElementById("closeModalBtn");
+
+// Function to open the modal
+function openModal() {
+  modal.style.display = "flex"; // Show the modal
+}
+
+// Function to close the modal
+function closeModal() {
+  modal.style.display = "none"; // Hide the modal
+}
+
+// Event listeners to open the modal
+btnDemo.addEventListener("click", openModal);
+btnGoals.addEventListener("click", openModal);
+
+// Event listener to close the modal
+closeModalBtn.addEventListener("click", closeModal);
+
+// Close the modal when clicking outside the modal content
+window.addEventListener("click", function(event) {
+  if (event.target === modal) {
+    closeModal();
   }
-})
-
-btnGoals.addEventListener("click" , function(){
-  if(Popup.classList.contains("popup-close")){
-
-    Popup.classList.remove("popup-close")
-    console.log("keu")
-  }else{
-    Popup.classList.add("popup-close")
-  }
-})
-
-
-popupIcons.addEventListener("click" , function(){
-  if(Popup.classList.contains("popup-close")){
-
-    Popup.classList.remove("popup-close")
-  }else{
-    Popup.classList.add("popup-close")
-  }
-})
-
-
+});
 
 
 const formData = {}
@@ -90,8 +111,6 @@ document.getElementById("myform").addEventListener("submit", async function(e){
   const result = await response.json();
   console.log('Success:', result)
   
-
-
   document.querySelector(".popup-btn").addEventListener('click' , function(){
     if(Popup.classList.contains("popup-close")){
       Popup.classList.remove("popup-close")
@@ -103,22 +122,3 @@ document.getElementById("myform").addEventListener("submit", async function(e){
     console.log("ERROR:", error )
   }
 })
-
-// Sticky Navigation
-const sectionHero = document.querySelector(".hero-section")
-const header = document.querySelector(".header")
-const obs  = new IntersectionObserver(function(entries){
-  const ent = entries[0]
-  if(ent.isIntersecting===false){
-    header.classList.add("sticky")
-  } else{
-  header.classList.remove("sticky")
-  }
-},
-{
-  root:null,
-  threshold:0,
-  rootMargin:"-300px"
-})
-
-obs.observe(sectionHero)

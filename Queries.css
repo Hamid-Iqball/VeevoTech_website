@@ -36,7 +36,6 @@
     margin-right: 15rem;
   }
   .header{
-
     padding-top: 2rem;
   }
 
@@ -155,10 +154,11 @@
     font-size: 4rem;
   }
   .nav-ul {
-    background-color: #fff;
+    background-color: #191919;
+    border: none;
     position: fixed;
     left: -100%;
-    top: 7.6rem;
+    top: 6.1rem;
     flex-direction: column;
     width: 100%;
     display: flex;
@@ -169,6 +169,7 @@
     gap: 3rem;
     font-size: 2rem;
     font-weight: 500;
+    color: #d6d6d6;
   }
   .nav-ul-items {
     margin: 2px 0;
@@ -642,6 +643,21 @@
   .clients h3 {
     text-align: center;
     font-size: 2.6rem;
+  }
+  .slider-track{
+    animation: scroll 50s linear infinite ease-in-out;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-480%);
+    }
+  }
+  .slide {
+    margin: 1rem 4rem;
+    width: 8rem;
   }
 }
 
